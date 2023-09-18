@@ -28,8 +28,8 @@ struct DiscoverView: View {
                         }
                         .padding(.horizontal
                         )
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            HStack {
+                        ScrollView(.vertical, showsIndicators: true) {
+                            VStack {
                                 ForEach(viewModel.trending) { trendingItem in
                                     NavigationLink {
                                         MovieDetailView(movie: trendingItem)
