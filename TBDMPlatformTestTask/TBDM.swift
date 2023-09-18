@@ -17,7 +17,7 @@ struct TBDM: App {
                         Image(systemName: "popcorn.circle")
                         Text("Популярное")
                     }
-                Text("Любимые фильмы")
+                FavoriteMoviesView()
                     .tabItem {
                         Image(systemName: "heart.circle")
                         Text("Избранное")
@@ -27,7 +27,7 @@ struct TBDM: App {
                         Image(systemName: "film.circle")
                         Text("Купить билеты")
                     }
-                Text("Профиль пользователя")
+                UserProfileView()
                     .tabItem {
                         Image(systemName: "person.circle")
                         Text("Профиль")
@@ -36,3 +36,4 @@ struct TBDM: App {
         }
     }
 }
+
