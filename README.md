@@ -1,4 +1,4 @@
-# Тестовое задание для комппании "ПЛАТФОРМА"
+# Тестовое задание для компании "ПЛАТФОРМА"
 
 
 <img src="https://github.com/allmycalifornia/TMDBPlatformTestTask/blob/main/TBDMPlatformTestTask.xcodeproj/Simulator%20Screenshot%20-%20iPhone%2014%20Pro%20-%202023-09-18%20at%2020.29.23.png"
