@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct CastView: View {
+struct CastingView: View {
 
     let cast: CastProfile
 
@@ -25,8 +25,9 @@ struct CastView: View {
                     .frame(width: 100, height: 120)
             }
             Text(cast.name)
-                .lineLimit(1)
+                .lineLimit(0)
                 .frame(width: 100)
+                .foregroundColor(.black)
         }
     }
 

@@ -8,24 +8,29 @@
 import SwiftUI
 
 @main
-struct TBDMPlatformTestTaskApp: App {
+struct TBDM: App {
     var body: some Scene {
         WindowGroup {
             TabView {
                 DiscoverView()
                     .tabItem {
                         Image(systemName: "popcorn.circle")
-                        Text("Trending")
+                        Text("Популярное")
                     }
-                Text("Favourites movies")
+                Text("Любимые фильмы")
                     .tabItem {
                         Image(systemName: "heart.circle")
-                        Text("Favourites")
+                        Text("Избранное")
                     }
-                Text("tickets")
+                Text("Сейчас в кинотеатрах:")
                     .tabItem {
                         Image(systemName: "film.circle")
-                        Text("Buy tickets")
+                        Text("Купить билеты")
+                    }
+                Text("Профиль пользователя")
+                    .tabItem {
+                        Image(systemName: "person.circle")
+                        Text("Профиль")
                     }
             }
         }

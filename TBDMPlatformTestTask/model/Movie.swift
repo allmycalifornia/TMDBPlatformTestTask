@@ -33,9 +33,9 @@ struct Movie: Identifiable, Decodable {
 
     static var preview: Movie {
         return Movie(adult: false,
-                     id: 23834,
+                     id: 12232,
                      poster_path: "https://image.tmdb.org/t/p/w300",
-                     title: "Free Guy",
+                     title: "The Movie",
                      overview: "some demo text here",
                      vote_average: 5.5,
                      backdrop_path: "https://image.tmdb.org/t/p/w300")

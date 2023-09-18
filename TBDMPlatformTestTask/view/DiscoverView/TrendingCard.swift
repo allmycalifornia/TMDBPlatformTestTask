@@ -20,7 +20,7 @@ struct TrendingCard: View {
                     .scaledToFill()
                     .frame(width: 340, height: 240)
             } placeholder: {
-                Rectangle().fill(Color(red:61/255,green:61/255,blue:88/255))
+                Rectangle().fill(Color.blue)
                         .frame(width: 340, height: 240)
             }
 
@@ -34,7 +34,7 @@ struct TrendingCard: View {
                         .foregroundColor(.red)
                 }
                 HStack {
-                    Image(systemName: "hand.thumbsup.fill")
+                    Image(systemName: "star.fill")
                     Text(String(format: "%.1f", trendingItem.vote_average))
                     Spacer()
                 }
@@ -42,7 +42,8 @@ struct TrendingCard: View {
                 .fontWeight(.heavy)
             }
             .padding()
-            .background(Color(red:61/255,green:61/255,blue:88/255))
+            .background(Color.black)
+            .opacity(0.75)
         }
         .cornerRadius(10)
     }

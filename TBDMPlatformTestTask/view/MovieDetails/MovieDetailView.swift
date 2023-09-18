@@ -13,11 +13,11 @@ struct MovieDetailView: View {
     @Environment(\.dismiss) var dismiss
     @StateObject var model = MovieDetailsViewModel()
     let movie: Movie
-    let headerHeight: CGFloat = 400
+    let headerHeight: CGFloat = 320
 
     var body: some View {
         ZStack {
-            Color(red:39/255,green:40/255,blue:59/255).ignoresSafeArea()
+            Color.white.ignoresSafeArea()
 
             GeometryReader { geo in
                 VStack {
@@ -42,44 +42,33 @@ struct MovieDetailView: View {
                         Text(movie.title)
                             .font(.title)
                             .fontWeight(.heavy)
-                            .foregroundColor(.white)
+                            .foregroundColor(.black)
                         Spacer()
-                        // ratings here
                     }
-
                     HStack {
-                        // genre tags
-
-                        // running time
-                    }
-
-                    HStack {
-                        Text("About film")
+                        Text("О фильме:")
                             .font(.title3)
                             .fontWeight(.bold)
-                            .foregroundColor(.white)
+                            .foregroundColor(.black)
                         Spacer()
-                        // see all button
                     }
 
                     Text(movie.overview)
-                        .lineLimit(2)
-                        //.foregroundColor(.secondary)
-                        .foregroundColor(.white)
+                        .lineLimit(10)
+                        .foregroundColor(.black)
 
                     HStack {
-                        Text("Cast & Crew")
+                        Text("В ролях:")
                             .font(.title3)
                             .fontWeight(.bold)
-                            .foregroundColor(.white)
+                            .foregroundColor(.black)
                         Spacer()
-                        // see all button
                     }
 
                     ScrollView(.horizontal, showsIndicators: false) {
                         LazyHStack {
                             ForEach(model.castProfiles) { cast in
-                                CastView(cast: cast)
+                                CastingView(cast: cast)
                             }
                         }
                     }

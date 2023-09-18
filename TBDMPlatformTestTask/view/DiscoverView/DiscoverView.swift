@@ -20,9 +20,9 @@ struct DiscoverView: View {
                         Text("No Results")
                     } else {
                         HStack {
-                            Text("Trending")
+                            Text("Популярное")
                                 .font(.title)
-                                .foregroundColor(.white)
+                                .foregroundColor(.black)
                                 .fontWeight(.heavy)
                             Spacer()
                         }
@@ -74,14 +74,14 @@ struct DiscoverView: View {
                                 Spacer()
                             }
                             .padding()
-                            .background(Color(red:61/255,green:61/255,blue:88/255))
+                            .background(Color.blue)
                             .cornerRadius(20)
                             .padding(.horizontal)
                         }
                     }
                 }
             }
-            .background(Color(red:39/255,green:40/255,blue:59/255).ignoresSafeArea())
+            .background(Color.white.ignoresSafeArea())
         }
         .searchable(text: $searchText)
         .onChange(of: searchText) { newValue in
