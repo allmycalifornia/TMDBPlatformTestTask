@@ -54,11 +54,11 @@ struct MovieDetailView: View {
                     }
 
                     Text(movie.overview)
-                        .lineLimit(10)
+                        .lineLimit(5)
                         .foregroundColor(.black)
 
                     HStack {
-                        Text("В ролях:")
+                        Text("Актёры")
                             .font(.title3)
                             .fontWeight(.bold)
                             .foregroundColor(.black)
@@ -68,7 +68,7 @@ struct MovieDetailView: View {
                     ScrollView(.horizontal, showsIndicators: false) {
                         LazyHStack {
                             ForEach(model.castProfiles) { cast in
-                                CastingView(cast: cast)
+                                ActorsView(cast: cast)
                             }
                         }
                     }
@@ -84,7 +84,7 @@ struct MovieDetailView: View {
                 Image(systemName: "chevron.left")
                     .imageScale(.large)
                     .fontWeight(.bold)
-                    .foregroundColor(.white)
+                    .foregroundColor(.blue)
             }
             .padding(.leading)
         }

@@ -30,7 +30,7 @@ class MovieDiscoverViewModel: ObservableObject {
 
     func search(term: String) {
         Task {
-            let url = URL(string: "https://api.themoviedb.org/3/search/movie?api_key=\(MovieDiscoverViewModel.apiKey)&language=ru-RU&region=RU&page=1&include_adult=true&query=\(term)".addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)!)!
+            let url = URL(string: "https://api.themoviedb.org/3/search/movie?api_key=\(MovieDiscoverViewModel.apiKey)&language=ru-RU&page=1&include_adult=true&query=\(term)".addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)!)!
             do {
                 let (data, _) = try await URLSession.shared.data(from: url)
                 let trendingResults = try JSONDecoder().decode(TrendingResults.self, from: data)

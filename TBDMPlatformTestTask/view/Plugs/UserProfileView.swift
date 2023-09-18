@@ -12,7 +12,7 @@ import SwiftUI
 struct UserProfileView: View {
     @State private var userImage: Image?
     @State private var username: String = ""
-    @State private var bio: String = "Здесь могла быть ваша биография."
+    @State private var bio: String = "Здесь могла бы быть ваша биография."
     
     var body: some View {
         VStack {

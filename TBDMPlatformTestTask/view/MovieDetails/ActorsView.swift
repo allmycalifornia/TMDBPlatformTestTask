@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ActorsView: View {
 
-    let cast: CastProfile
+    let cast: ActorsProfile
 
     var body: some View {
         VStack {

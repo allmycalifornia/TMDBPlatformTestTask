@@ -36,8 +36,8 @@ struct Movie: Identifiable, Decodable {
                      id: 12232,
                      poster_path: "https://image.tmdb.org/t/p/w300",
                      title: "The Movie",
-                     overview: "some demo text here",
-                     vote_average: 5.5,
+                     overview: "some text here",
+                     vote_average: 7.5,
                      backdrop_path: "https://image.tmdb.org/t/p/w300")
     }
 }

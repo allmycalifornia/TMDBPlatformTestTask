@@ -12,7 +12,7 @@ struct TBDM: App {
     var body: some Scene {
         WindowGroup {
             TabView {
-                DiscoverView()
+                MovieListView()
                     .tabItem {
                         Image(systemName: "popcorn.circle")
                         Text("Популярное")

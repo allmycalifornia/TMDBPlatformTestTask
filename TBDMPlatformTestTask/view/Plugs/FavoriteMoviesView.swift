@@ -10,7 +10,7 @@
 import SwiftUI
 
 struct FavoriteMoviesView: View {
-    @State private var favoriteMovies: [String] = ["Властелин колец", "Гарри Поттер", "Охотники за приведениями", "Индиана Джонс", "Драйв"]
+    @State private var favoriteMovies: [String] = ["Властелин колец 💍", "Гарри Поттер 🪄", "Охотники за приведениями 👻", "Индиана Джонс 🤠", "Драйв 🚗"]
     
     var body: some View {
         NavigationView {
@@ -36,7 +36,7 @@ struct MovieDetailScreen: View {
     let movieTitle: String
     
     var body: some View {
-        Text("Детали фильма: \(movieTitle)")
+        Text("Описание фильма: \(movieTitle)")
             .navigationBarTitle(movieTitle, displayMode: .inline)
     }
 }

@@ -13,7 +13,7 @@ class MovieDetailsViewModel: ObservableObject {
 
     @Published var credits: MovieCredits?
     @Published var cast: [MovieCredits.Cast] = []
-    @Published var castProfiles: [CastProfile] = []
+    @Published var castProfiles: [ActorsProfile] = []
 
     func movieCredits(for movieID: Int) async {
         let url = URL(string: "https://api.themoviedb.org/3/movie/\(movieID)/credits?api_key=\(MovieDiscoverViewModel.apiKey)&language=ru-RU")!
@@ -32,7 +32,7 @@ class MovieDetailsViewModel: ObservableObject {
             for member in cast {
                 let url = URL(string: "https://api.themoviedb.org/3/person/\(member.id)?api_key=\(MovieDiscoverViewModel.apiKey)&language=ru-RU")!
                 let (data, _) = try await URLSession.shared.data(from: url)
-                let profile = try JSONDecoder().decode(CastProfile.self, from: data)
+                let profile = try JSONDecoder().decode(ActorsProfile.self, from: data)
                 castProfiles.append(profile)
             }
         } catch {
@@ -41,7 +41,7 @@ class MovieDetailsViewModel: ObservableObject {
     }
 }
 
-struct CastProfile: Decodable, Identifiable {
+struct ActorsProfile: Decodable, Identifiable {
 
     let birthday: String?
     let id: Int
