@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct CastingView: View {
+struct ActorsView: View {
 
     let cast: CastProfile
 

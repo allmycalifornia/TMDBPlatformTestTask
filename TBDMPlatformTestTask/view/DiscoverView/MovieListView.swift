@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DiscoverView: View {
+struct MovieListView: View {
 
     @StateObject var viewModel = MovieDiscoverViewModel()
     @State var searchText = ""
@@ -17,7 +17,8 @@ struct DiscoverView: View {
             ScrollView {
                 if searchText.isEmpty {
                     if viewModel.trending.isEmpty {
-                        Text("No Results")
+                        Text("Данные не загружены.\nВключите VPN и проверьте\nсоединение с интернетом.")
+                            .multilineTextAlignment(.center)
                     } else {
                         HStack {
                             Text("Популярное")
@@ -97,6 +98,6 @@ struct DiscoverView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        DiscoverView()
+        MovieListView()
     }
 }
