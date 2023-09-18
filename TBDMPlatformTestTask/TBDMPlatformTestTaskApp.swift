@@ -11,7 +11,23 @@ import SwiftUI
 struct TBDMPlatformTestTaskApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView {
+                DiscoverView()
+                    .tabItem {
+                        Image(systemName: "popcorn.circle")
+                        Text("Trending")
+                    }
+                Text("Favourites movies")
+                    .tabItem {
+                        Image(systemName: "heart.circle")
+                        Text("Favourites")
+                    }
+                Text("tickets")
+                    .tabItem {
+                        Image(systemName: "film.circle")
+                        Text("Buy tickets")
+                    }
+            }
         }
     }
 }
